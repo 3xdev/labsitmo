@@ -55,9 +55,10 @@ func main() {
 		}
 		sum := 0
 		for i := 0; i < len(teams); i++ {
-			sum += (teams[i] * (f.N - teams[i])) / 2
+			for j := i + 1; j < len(teams); j++ {
+				sum += teams[i] * teams[j]
+			}
 		}
-		fmt.Println(teams)
 		fmt.Println(sum)
 
 	}
